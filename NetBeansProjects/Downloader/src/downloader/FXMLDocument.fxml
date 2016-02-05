@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="456.0" prefWidth="618.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="downloader.FXMLDocumentController">
+   <children>
+      <SplitPane dividerPositions="0.09911894273127753" orientation="VERTICAL" prefHeight="456.0" prefWidth="618.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane maxHeight="40.0" minHeight="0.0" minWidth="0.0" prefHeight="40.0" prefWidth="616.0">
+               <children>
+                  <TextField fx:id="edit_FILENAME" editable="false" layoutX="10.0" layoutY="7.0" maxHeight="24.0" minHeight="15.0" prefHeight="24.0" prefWidth="467.0" AnchorPane.bottomAnchor="7.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="139.0" AnchorPane.topAnchor="9.0" />
+                  <Button fx:id="button_LOADFILE" layoutX="483.0" layoutY="7.0" mnemonicParsing="false" onAction="#button_ACTION" prefHeight="26.0" prefWidth="51.0" text="Load" AnchorPane.rightAnchor="82.0" />
+                  <Button id="button_start" ellipsisString="" layoutX="537.0" layoutY="7.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="66.0" text="Do!" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <SplitPane dividerPositions="0.29545454545454547" prefHeight="456.0" prefWidth="618.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <items>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                           <children>
+                              <ListView fx:id="list_FILES" layoutX="-11.0" layoutY="14.0" prefHeight="454.0" prefWidth="178.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <contextMenu>
+                                    <ContextMenu>
+                                      <items>
+                                        <MenuItem fx:id="menu_ACTION" mnemonicParsing="false" onAction="#menu_ACTION" text="Start download" />
+                                      </items>
+                                    </ContextMenu>
+                                 </contextMenu>
+                              </ListView>
+                           </children>
+                        </AnchorPane>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                           <children>
+                              <StackPane fx:id="paneMain" layoutX="26.0" layoutY="83.0" prefHeight="404.0" prefWidth="429.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" />
+                           </children>
+                        </AnchorPane>
+                    </items>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
